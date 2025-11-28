@@ -1,31 +1,39 @@
 <<<<<<< HEAD
 # devops_assignment
 =======
->>>>>>> 12431ae (Initial commit)
-In this DevOps task, you need to build and deploy a full-stack CRUD application using the MEAN stack (MongoDB, Express, Angular 15, and Node.js). The backend will be developed with Node.js and Express to provide REST APIs, connecting to a MongoDB database. The frontend will be an Angular application utilizing HTTPClient for communication.  
+# devops-mean-deploy
+# DevOps MEAN App Deployment
 
-The application will manage a collection of tutorials, where each tutorial includes an ID, title, description, and published status. Users will be able to create, retrieve, update, and delete tutorials. Additionally, a search box will allow users to find tutorials by title.
+## Overview
+This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push and deploy a MEAN app.
 
-## Project setup
+## Files added
+- backend
+- frontend
+- docker-compose.yml
+- deploy/nginx.conf
+- .github/workflows/ci-cd.yml
 
-### Node.js Server
+## How to run
+1. Create Docker Hub repos and set Secrets in GitHub:
+   - DOCKERHUB_USERNAME
+   - DOCKERHUB_TOKEN
+   - SSH_PRIVATE_KEY
+   - VM_HOST
+   - VM_USER
+   - VM_SSH_PORT
 
-cd backend
+2. Provision Ubuntu VM (open ports 22 & 80) and install docker & compose:
+   (see commands in repo or in the task description)
 
-npm install
+3. Push code to main → GitHub Actions will build and push images and deploy to VM.
 
-You can update the MongoDB credentials by modifying the `db.config.js` file located in `app/config/`.
+## Verification
+- Visit http://YOUR_VM_IP to see the frontend.
+- API calls are proxied to /api/ to the backend.
 
-Run `node server.js`
+## Screenshots
+(Attach CI run, Docker Hub, VM docker ps, website)
 
-### Angular Client
 
-cd frontend
 
-npm install
-
-Run `ng serve --port 8081`
-
-You can modify the `src/app/services/tutorial.service.ts` file to adjust how the frontend interacts with the backend.
-
-Navigate to `http://localhost:8081/`
