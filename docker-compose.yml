@@ -31,6 +31,7 @@ services:
 
   nginx:
     image: nginx:stable-alpine
+    container_name: devops-assignment-nginx-1
     restart: unless-stopped
     ports:
       - "80:80"
