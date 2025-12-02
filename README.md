@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+CRUD-DD-TASK-MEAN-APP
+This repository contains a full-stack MEAN (MongoDB, Express, Angular, Node.js) application deployed using Docker on AWS. This setup was implemented as part of the DevOps Engineer Intern Assignment.
 # devops_assignment
 =======
+Website URL - http://16.170.254.214/
 # devops-mean-deploy
 # DevOps MEAN App Deployment
 
@@ -11,7 +14,7 @@ This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push
 - backend
 - frontend
 - docker-compose.yml
-- deploy/nginx.conf
+- nginx.conf
 - .github/workflows/ci-cd.yml
 
 ## How to run
@@ -33,7 +36,12 @@ This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push
 - API calls are proxied to /api/ to the backend.
 
 ## Screenshots
+
+Github Actions CI/CD Pipeline for MEAN App Deployment
+
 (Attach CI run, Docker Hub, VM docker ps, website)
+
+
 
 
 
