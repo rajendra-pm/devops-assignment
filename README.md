@@ -11,8 +11,8 @@ Website URL - http://16.170.254.214/
 This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push and deploy a MEAN app.
 
 ## Files added
-- backend
-- frontend
+- backend/Dockerfile
+- frontend/Dockerfile
 - docker-compose.yml
 - nginx.conf
 - .github/workflows/ci-cd.yml
