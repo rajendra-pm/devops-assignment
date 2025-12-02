@@ -1,8 +1,48 @@
+# version: '3.8'
+
+# services:
+#   mongo:
+#     image: mongo:6
+#     container_name: mongo
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo-data:/data/db
+
+#   backend:
+#     image: rajendra3/backend:latest
+#     container_name: backend
+#     ports:
+#       - "8080:8080"
+#     depends_on:
+#       - mongo
+#     environment:
+#       - MONGO_URL=mongodb://mongo:27017/dd_db
+
+#   frontend:
+#     image: rajendra3/frontend:latest
+#     container_name: frontend
+#     depends_on:
+#       - backend
+
+#   nginx:
+#     image: nginx:stable-alpine
+#     container_name: nginx
+#     ports:
+#       - "80:80"
+#     volumes:
+#       - ./nginx.conf:/etc/nginx/nginx.conf
+#     depends_on:
+#       - frontend
+
+# volumes:
+#   mongo-data:
+
 version: '3.8'
 
 services:
   mongo:
-    image: mongo:6
+    image: mongo
     container_name: mongo
     ports:
       - "27017:27017"
@@ -10,7 +50,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    image: rajendra3/backend:latest
+    image: boobu/backend-mean
     container_name: backend
     ports:
       - "8080:8080"
@@ -20,20 +60,12 @@ services:
       - MONGO_URL=mongodb://mongo:27017/dd_db
 
   frontend:
-    image: rajendra3/frontend:latest
+    image: boobu/frontend-mean
     container_name: frontend
-    depends_on:
-      - backend
-
-  nginx:
-    image: nginx:stable-alpine
-    container_name: nginx
     ports:
       - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
-      - frontend
+      - backend
 
 volumes:
   mongo-data:
