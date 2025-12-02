@@ -49,7 +49,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.VM_HOST }}
-          username: ${{ secrets.VM_USER }}
+          username: ${{ secrets.VM_USER }} 
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.VM_SSH_PORT }}
           script: |
