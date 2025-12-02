@@ -51,3 +51,35 @@ volumes:
 networks:
   appnet:
     driver: bridge
+
+# version: '3.8'
+
+# services:
+#   mongo:
+#     image: mongo
+#     container_name: mongo
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo-data:/data/db
+
+#   backend:
+#     image: boobu/backend-mean
+#     container_name: backend
+#     ports:
+#       - "8080:8080"
+#     depends_on:
+#       - mongo
+#     environment:
+#       - MONGO_URL=mongodb://mongo:27017/dd_db
+
+#   frontend:
+#     image: boobu/frontend-mean
+#     container_name: frontend
+#     ports:
+#       - "80:80"
+#     depends_on:
+#       - backend
+
+# volumes:
+#   mongo-data:
