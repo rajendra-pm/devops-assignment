@@ -50,7 +50,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    image: boobu/backend-mean
+    image: rajendra3/backend
     container_name: backend
     ports:
       - "8080:8080"
@@ -60,7 +60,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/dd_db
 
   frontend:
-    image: boobu/frontend-mean
+    image: rajendra3/frontend
     container_name: frontend
     ports:
       - "80:80"
