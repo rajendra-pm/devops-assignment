@@ -5,7 +5,7 @@ This repository contains a full-stack MEAN (MongoDB, Express, Angular, Node.js) 
 =======
 Website URL - http://16.170.254.214/
 # devops-mean-deploy
-# DevOps MEAN App Deployment
+# Github Actions CI/CD Pipeline for MEAN App Deployment
 
 ## Overview
 This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push and deploy a MEAN app.
@@ -36,9 +36,6 @@ This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push
 - API calls are proxied to /api/ to the backend.
 
 ## Screenshots
-
-Github Actions CI/CD Pipeline for MEAN App Deployment
-
 (Attach CI run, Docker Hub, VM docker ps, website)
 
 
