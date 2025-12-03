@@ -18,7 +18,7 @@ services:
       - mongo
     environment:
       - MONGO_URL=mongodb://mongo:27017/dd_db
-
+ 
   frontend: 
     image: rajendra3/frontend
     container_name: frontend
