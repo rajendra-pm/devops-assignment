@@ -15,7 +15,7 @@ This repo contains Dockerfiles, docker-compose and GitHub Actions to build, push
 - backend/Dockerfile
 - frontend/Dockerfile
 - docker-compose.yml
-- nginx.conf
+- nginx.conf 
 - .github/workflows/ci-cd.yml
 
 ## How to run
