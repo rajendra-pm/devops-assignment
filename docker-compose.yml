@@ -10,7 +10,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    image: rajendra3/backend
+    image: rajendra3/backend:latest     # 🔥 Correct
     container_name: backend
     ports:
       - "8080:8080"
@@ -18,9 +18,9 @@ services:
       - mongo
     environment:
       - MONGO_URL=mongodb://mongo:27017/dd_db
- 
-  frontend: 
-    image: rajendra3/frontend
+
+  frontend:
+    image: rajendra3/frontend:latest    # 🔥 Correct
     container_name: frontend
     ports:
       - "80:80"
